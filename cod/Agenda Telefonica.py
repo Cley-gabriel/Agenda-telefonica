@@ -1,3 +1,4 @@
+from time import sleep
 #Função criada para salvar os contatos e consultar, logo que o algoritmo é reiniciado os dados que estão salvos são apagados e os novos adicionados ficam.
 def salvar_contatos(agenda):
 
@@ -130,7 +131,9 @@ def menu():
         elif op ==6:
              consultar(agenda)
         elif op ==7:
-            print("Termino do sistema.")
+            print("Aguarde...")
+            sleep(1)
+            print("Sistema Encerrado")
             break
         else: 
             print("Opção inválida, tente novamente")
