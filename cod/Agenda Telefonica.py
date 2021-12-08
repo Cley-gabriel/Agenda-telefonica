@@ -80,7 +80,7 @@ def vazia(agenda):
     if vazia == 0:
         print("Agenda vazia.")
     else:
-        print("Agenda NÃO vazia.")
+        print("Agenda não vazia.")
 
 #Função criada para buscar usuarios pelo telefone. 
 def consultar (agenda):
