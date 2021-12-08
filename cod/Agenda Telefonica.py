@@ -8,7 +8,7 @@ def salvar_contatos(agenda):
         arquivo.write("{} # {} # {} # {} # {}\n".format(contato["nome"], contato["telefone"], contato["Email"], contato["Estado"], contato["Cidade"]))
     arquivo.close()
 
-#Funçao criada para ver se já tem contato adicionado
+#Funçao criada para ver se já tem contato adicionado, não vai aceitar numeros repetidos. 
 def existe_contato(agenda, telefone):
 
     if len (agenda) > 0:
@@ -16,7 +16,8 @@ def existe_contato(agenda, telefone):
             if contato["telefone"] == telefone:
                 return True
     return False
-#Função criada para não aceitar numeros repetidos. 
+    
+
 def adicionar (agenda):
 
     while True: 
@@ -63,7 +64,8 @@ def listar(agenda):
         print("="*35)
     else:
         print("\nNão existe nenhum contato cadastrado!!!\n")
-        
+
+#Primeiro contato da agenda       
 def topo(agenda): 
 
     print("="*35)
@@ -72,7 +74,7 @@ def topo(agenda):
                                       
     else:
         print("\nNão existe nenhum contato cadastrado!!!\n")
-                    
+                 
 def vazia(agenda): 
     vazia = len(agenda) 
     if vazia == 0:
